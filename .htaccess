@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Redirect old /file.php URLs to /file (only for GET requests)
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+RewriteCond %{REQUEST_METHOD} !=POST
+RewriteRule ^ /%1 [R=301,L,NE]
+
+# Hide .php extension in URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.+?)/?$ $1.php [L]
+
+# Default homepage
+RewriteRule ^$ index.php [L]
