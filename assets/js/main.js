@@ -1,3 +1,13 @@
+const hidePageLoader = () => {
+    document.documentElement.classList.remove('has-page-loader');
+};
+
+if (document.readyState === 'complete') {
+    hidePageLoader();
+} else {
+    window.addEventListener('load', hidePageLoader, { once: true });
+}
+
 // ================================
 // Initialize AOS (Animate On Scroll)
 // ================================

@@ -38,9 +38,19 @@ require_once __DIR__ . '/../config.php';
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets/css/style.css?v=<?php echo ASSETS_VERSION; ?>">
+    <script>document.documentElement.classList.add('has-page-loader');</script>
 </head>
 
 <body>
+    <div class="page-loader" role="status" aria-live="polite">
+        <div class="page-loader-content">
+            <img src="<?php echo SITE_URL; ?>/assets/images/logo.png" alt="" class="page-loader-logo">
+            <span class="page-loader-line" aria-hidden="true"></span>
+            <p class="page-loader-message">Preparing your experience</p>
+            <span class="page-loader-caption">Engineering strength since 1989</span>
+        </div>
+    </div>
+
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="container-fluid">
@@ -55,9 +65,6 @@ require_once __DIR__ . '/../config.php';
                     <?php endforeach; ?>
                 </div>
                 <div class="top-bar-left right">
-                    <a href="<?php echo COMPANY_WEBSITE; ?>" target="_blank" rel="noopener">
-                        <i class="fas fa-globe"></i> www.standardexports.co.in
-                    </a>
                     <a><i class="fas fa-map-marker-alt"></i> <?php echo CONTACT_ADDRESS; ?></a>
                     <!-- <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>

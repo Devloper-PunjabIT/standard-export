@@ -33,6 +33,96 @@ html {
     overflow-x: hidden;
 }
 
+html.has-page-loader {
+    overflow: hidden;
+}
+
+.page-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(ellipse at 50% 42%, rgba(2, 150, 64, 0.08), transparent 42%),
+        var(--white-color);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+html.has-page-loader .page-loader {
+    opacity: 1;
+    visibility: visible;
+}
+
+.page-loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    text-align: center;
+}
+
+.page-loader-logo {
+    width: min(190px, 58vw);
+    height: auto;
+    margin-bottom: 34px;
+}
+
+.page-loader-line {
+    position: relative;
+    width: min(180px, 56vw);
+    height: 3px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(2, 150, 64, 0.14);
+}
+
+.page-loader-line::after {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 38%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+    content: '';
+    animation: page-loader-line 1.15s ease-in-out infinite;
+}
+
+.page-loader-message {
+    margin: 20px 0 4px;
+    color: var(--dark-color);
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.page-loader-caption {
+    color: var(--text-light);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+@keyframes page-loader-line {
+    to {
+        transform: translateX(265%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-loader,
+    .page-loader-line::after {
+        animation: none;
+        transition: none;
+    }
+
+    .page-loader-line::after {
+        width: 100%;
+    }
+}
+
 body {
     font-family: var(--font-primary);
     font-size: 16px;
@@ -3854,7 +3944,7 @@ textarea.form-input {
     .hero-section .swiper-slide::before {
         width: 100%;
         background-image: linear-gradient(135deg, rgba(2, 69, 42, 0.88), rgba(2, 43, 26, 0.78)),
-            url('../images/banner-2.webp');
+            url('../images/banner1.webp');
         background-position: center;
         background-size: cover;
     }
@@ -3865,7 +3955,7 @@ textarea.form-input {
 
     .hero-section .swiper-slide.hero-slide-2::before {
         background-image: linear-gradient(135deg, rgba(2, 69, 42, 0.88), rgba(2, 43, 26, 0.78)),
-            url('../images/banner1.webp');
+            url('../images/banner2.webp');
     }
 
     .hero-section .hero-text {
@@ -3895,6 +3985,7 @@ textarea.form-input {
 
     .hero-section .hero-title {
         max-width: 440px;
+        margin: auto;
         font-size: clamp(36px, 8vw, 48px) !important;
     }
 
