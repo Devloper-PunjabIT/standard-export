@@ -16,7 +16,8 @@ $footer_phone_numbers = array_merge([CONTACT_PHONE], CONTACT_MOBILES);
                         <img src="assets/images/logo-light.png" alt="Standard Exports logo" class="footer-logo-img">
                     </div>
                     <p class="footer-description">
-                        Standard Exports manufactures and exports bolts, nuts, washers, cast and forged items.
+                        Standard Exports manufactures and exports bolts, nuts, washers, cast and forged items, CNC
+                        machine components, and sheet metal components.
                         Products are available in Mild Steel, EN-Series, CI, SGI and stainless steel. ISO 9001:2015
                         certified. Established in 1989.
                     </p>
@@ -34,7 +35,8 @@ $footer_phone_numbers = array_merge([CONTACT_PHONE], CONTACT_MOBILES);
                     <ul class="footer-links">
                         <li><a href="<?= SITE_URL ?>/">Home</a></li>
                         <li><a href="<?= SITE_URL ?>/about">About Us</a></li>
-                        <li><a href="<?= SITE_URL ?>/gallery">Gallery</a></li>
+                        <li><a href="<?= SITE_URL ?>/infrastructure">Infrastructure</a></li>
+                        <li><a href="<?= SITE_URL ?>/certifications">Certifications</a></li>
                         <li><a href="<?= SITE_URL ?>/contact">Contact</a></li>
                     </ul>
                 </div>
@@ -47,6 +49,8 @@ $footer_phone_numbers = array_merge([CONTACT_PHONE], CONTACT_MOBILES);
                         <li><a href="<?= SITE_URL ?>/nuts">Nuts</a></li>
                         <li><a href="<?= SITE_URL ?>/washers">Washers</a></li>
                         <li><a href="<?= SITE_URL ?>/cast-forged">Cast &amp; Forged Items</a></li>
+                        <li><a href="<?= SITE_URL ?>/cnc-machine-components">CNC Machine Components</a></li>
+                        <li><a href="<?= SITE_URL ?>/sheet-metal-components">Sheet Metal Components</a></li>
                     </ul>
                 </div>
 

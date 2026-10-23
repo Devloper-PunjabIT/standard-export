@@ -19,7 +19,7 @@ define('COMPANY_WEBSITE', 'https://www.standardexports.co.in');
 define('COMPANY_NAME', 'Standard Exports');
 
 // Asset Versioning (for cache busting - update this when you change CSS/JS files)
-define('ASSETS_VERSION', '2.6.1'); // Change this version whenever you update CSS/JS files
+define('ASSETS_VERSION', '2.6.3'); // Change this version whenever you update CSS/JS files
 
 // SMTP Email Configuration
 define('SMTP_HOST', 'smtp.gmail.com');          // SMTP server (e.g., smtp.gmail.com for Gmail)

@@ -1,10 +1,10 @@
 <?php
-$page_title = 'Product Gallery - Standard Exports';
-$current_page = "gallery";
+$page_title = 'Infrastructure - Standard Exports';
+$current_page = "infrastructure";
 include 'includes/header.php';
 
-// Load gallery images from external file
-$gallery_images = include 'gallery-data.php';
+// Load infrastructure images from external file
+$infrastructure_images = include 'infrastructure-data.php';
 ?>
 
 <!-- Page Header -->
@@ -13,33 +13,33 @@ $gallery_images = include 'gallery-data.php';
         <nav class="page-breadcrumb" aria-label="Breadcrumb">
             <a href="<?php echo SITE_URL; ?>/">Home</a>
             <i class="fas fa-chevron-right" aria-hidden="true"></i>
-            <span aria-current="page">Gallery</span>
+            <span aria-current="page">Infrastructure</span>
         </nav>
     </div>
 </section>
 
-<!-- Gallery Section -->
-<section class="gallery-page">
+<!-- Infrastructure Section -->
+<section class="infrastructure-page">
     <div class="container-fluid">
 
         <div class="contact-intro">
-            <h1>Product Gallery</h1>
-            <p>Browse our gallery of bolts, nuts, washers, and cast and forged items from the Standard Exports product
-                range.</p>
+            <h1>Infrastructure</h1>
+            <p>Explore Standard Exports' facilities and product range, including bolts, nuts, washers, and cast and
+                forged items.</p>
         </div>
 
 
 
-        <!-- Gallery Grid -->
-        <div class="gallery-grid">
-            <?php foreach ($gallery_images as $index => $image): ?>
-                <div class="gallery-item" data-image="<?php echo $image['full']; ?>"
+        <!-- Infrastructure Image Grid -->
+        <div class="infrastructure-grid">
+            <?php foreach ($infrastructure_images as $index => $image): ?>
+                <div class="infrastructure-item" data-image="<?php echo $image['full']; ?>"
                     data-title="<?php echo htmlspecialchars($image['title']); ?>" data-index="<?php echo $index; ?>">
                     <img src="<?php echo $image['thumb']; ?>" alt="<?php echo htmlspecialchars($image['title']); ?>">
-                    <div class="gallery-overlay">
-                        <span class="gallery-caption"><?php echo htmlspecialchars($image['title']); ?></span>
+                    <div class="infrastructure-overlay">
+                        <span class="infrastructure-caption"><?php echo htmlspecialchars($image['title']); ?></span>
                     </div>
-                    <div class="gallery-icon">
+                    <div class="infrastructure-icon">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
@@ -70,8 +70,8 @@ $gallery_images = include 'gallery-data.php';
 </div>
 
 <script>
-    // Gallery data from PHP
-    const galleryData = <?php echo json_encode($gallery_images); ?>;
+    // Infrastructure image data from PHP
+    const infrastructureData = <?php echo json_encode($infrastructure_images); ?>;
     let currentIndex = 0;
 
     // Get elements
@@ -81,10 +81,10 @@ $gallery_images = include 'gallery-data.php';
     const closeBtn = document.getElementById('lightbox-close');
     const prevBtn = document.getElementById('lightbox-prev');
     const nextBtn = document.getElementById('lightbox-next');
-    const galleryItems = document.querySelectorAll('.gallery-item');
+    const infrastructureItems = document.querySelectorAll('.infrastructure-item');
 
     // Open lightbox
-    galleryItems.forEach((item, index) => {
+    infrastructureItems.forEach((item, index) => {
         item.addEventListener('click', () => {
             currentIndex = index;
             openLightbox();
@@ -92,9 +92,9 @@ $gallery_images = include 'gallery-data.php';
     });
 
     function openLightbox() {
-        const data = galleryData[currentIndex];
+        const data = infrastructureData[currentIndex];
         lightboxImg.src = data.full;
-        lightboxCounter.textContent = `${currentIndex + 1} / ${galleryData.length}`;
+        lightboxCounter.textContent = `${currentIndex + 1} / ${infrastructureData.length}`;
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
@@ -115,13 +115,13 @@ $gallery_images = include 'gallery-data.php';
     // Navigation
     prevBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        currentIndex = (currentIndex - 1 + galleryData.length) % galleryData.length;
+        currentIndex = (currentIndex - 1 + infrastructureData.length) % infrastructureData.length;
         openLightbox();
     });
 
     nextBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        currentIndex = (currentIndex + 1) % galleryData.length;
+        currentIndex = (currentIndex + 1) % infrastructureData.length;
         openLightbox();
     });
 
@@ -132,10 +132,10 @@ $gallery_images = include 'gallery-data.php';
         if (e.key === 'Escape') {
             closeLightbox();
         } else if (e.key === 'ArrowLeft') {
-            currentIndex = (currentIndex - 1 + galleryData.length) % galleryData.length;
+            currentIndex = (currentIndex - 1 + infrastructureData.length) % infrastructureData.length;
             openLightbox();
         } else if (e.key === 'ArrowRight') {
-            currentIndex = (currentIndex + 1) % galleryData.length;
+            currentIndex = (currentIndex + 1) % infrastructureData.length;
             openLightbox();
         }
     });

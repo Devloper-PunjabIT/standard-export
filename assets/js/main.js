@@ -85,6 +85,38 @@ const heroSwiper = new Swiper('.hero-swiper', {
     }
 });
 
+const productCategorySwiperElement = document.querySelector('.product-category-swiper');
+if (productCategorySwiperElement) {
+    new Swiper(productCategorySwiperElement, {
+        loop: true,
+        speed: 700,
+        spaceBetween: 22,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: '.product-category-next',
+            prevEl: '.product-category-prev',
+        },
+        pagination: {
+            el: '.product-category-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            640: {
+                slidesPerView: 2,
+            },
+            1100: {
+                slidesPerView: 4,
+            },
+        },
+    });
+}
+
 // ================================
 // Mobile Menu Toggle
 // ================================

@@ -1,6 +1,6 @@
 # Standard Exports Website
 
-A PHP website for Standard Exports, manufacturer and exporter of bolts, nuts, washers, and cast and forged items. The company information reflects Standard Exports' Nut Bolt Division, established in 1989, ISO 9001:2015 certification, and listed material range of Mild Steel, EN-Series, CI, SGI, and stainless steel.
+A PHP website for Standard Exports, manufacturer and exporter of bolts, nuts, washers, cast and forged items, CNC machine components, and sheet metal components. The company information reflects Standard Exports' Nut Bolt Division, established in 1989, ISO 9001:2015 certification, and listed material range of Mild Steel, EN-Series, CI, SGI, and stainless steel.
 
 ## Features
 
@@ -52,6 +52,9 @@ A PHP website for Standard Exports, manufacturer and exporter of bolts, nuts, wa
 ├── nuts.php                   # Nuts
 ├── washers.php                # Washers
 ├── cast-forged.php            # Cast and forged items
+├── cnc-machine-components.php # CNC machine components
+├── sheet-metal-components.php # Sheet metal components
+├── certifications.php         # Company certifications
 └── README.md
 ```
 
@@ -97,7 +100,7 @@ Replace placeholder images in the `assets/images/` folder with your own high-qua
 - `index.php` - Company overview and product categories
 - `about.php` - Company details
 - `bolts.php`, `nuts.php`, `washers.php`, `cast-forged.php` - Separate product category pages
-- `gallery.php` - Product image gallery
+- `infrastructure.php` - Infrastructure and product images
 - `contact.php` - Contact details and enquiry form
 
 ## Browser Support

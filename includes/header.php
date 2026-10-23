@@ -9,9 +9,9 @@ require_once __DIR__ . '/../config.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Standard Exports manufactures and exports bolts, nuts, washers, cast and forged items in Mild Steel, EN-Series, CI, SGI and stainless steel. ISO 9001:2015 certified. Since 1989.">
+        content="Standard Exports manufactures and exports bolts, nuts, washers, cast and forged items, CNC machine components, and sheet metal components. ISO 9001:2015 certified. Since 1989.">
     <title>
-        <?php echo isset($page_title) ? $page_title : 'Standard Exports | Bolts, Nuts, Washers & Forgings'; ?>
+        <?php echo isset($page_title) ? $page_title : 'Standard Exports | Fasteners & Industrial Components'; ?>
     </title>
 
     <!-- Favicon -->
@@ -101,10 +101,14 @@ require_once __DIR__ . '/../config.php';
                             <li><a href="<?= SITE_URL ?>/washers">Washers</a></li>
                             <li><a href="<?= SITE_URL ?>/cast-forged">Cast &amp; Forged Items</a>
                             </li>
+                            <li><a href="<?= SITE_URL ?>/cnc-machine-components">CNC Machine Components</a></li>
+                            <li><a href="<?= SITE_URL ?>/sheet-metal-components">Sheet Metal Components</a></li>
                         </ul>
                     </li>
-                    <li><a href="<?= SITE_URL ?>/gallery"
-                            class="<?php echo ($current_page == 'gallery') ? 'active' : ''; ?>">Gallery</a></li>
+                    <li><a href="<?= SITE_URL ?>/infrastructure"
+                            class="<?php echo ($current_page == 'infrastructure') ? 'active' : ''; ?>">Infrastructure</a></li>
+                    <li><a href="<?= SITE_URL ?>/certifications"
+                            class="<?php echo ($current_page == 'certifications') ? 'active' : ''; ?>">Certifications</a></li>
                     <a href="<?= SITE_URL ?>/contact" class="btn btn-header">Get Quote</a>
 
                     <!-- <li><a href="<?= SITE_URL ?>/contact"
@@ -140,11 +144,17 @@ require_once __DIR__ . '/../config.php';
                                 <li><a href="<?= SITE_URL ?>/washers">Washers</a></li>
                                 <li><a href="<?= SITE_URL ?>/cast-forged">Cast &amp; Forged
                                         Items</a></li>
+                                <li><a href="<?= SITE_URL ?>/cnc-machine-components">CNC Machine Components</a></li>
+                                <li><a href="<?= SITE_URL ?>/sheet-metal-components">Sheet Metal Components</a></li>
                             </ul>
                         </li>
-                        <li><a href="<?= SITE_URL ?>/gallery"
-                                class="<?php echo ($current_page == 'gallery') ? 'active' : ''; ?>">
-                                <i class="fas fa-images"></i> Gallery
+                        <li><a href="<?= SITE_URL ?>/infrastructure"
+                                class="<?php echo ($current_page == 'infrastructure') ? 'active' : ''; ?>">
+                                <i class="fas fa-images"></i> Infrastructure
+                            </a></li>
+                        <li><a href="<?= SITE_URL ?>/certifications"
+                                class="<?php echo ($current_page == 'certifications') ? 'active' : ''; ?>">
+                                <i class="fas fa-certificate"></i> Certifications
                             </a></li>
                         <li><a href="<?= SITE_URL ?>/contact"
                                 class="<?php echo ($current_page == 'contact') ? 'active' : ''; ?>">

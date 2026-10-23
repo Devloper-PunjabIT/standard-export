@@ -23,6 +23,16 @@ $category_details = [
         'intro' => 'Discover cast and forged components included in the Standard Exports industrial product range.',
         'image' => 'Forged Parts.webp',
     ],
+    'cnc-machine-components' => [
+        'title' => 'CNC Machine Components',
+        'intro' => 'Explore CNC machine components offered by Standard Exports for industrial machinery and equipment.',
+        'image' => 'gear-casting.png',
+    ],
+    'sheet-metal-components' => [
+        'title' => 'Sheet Metal Components',
+        'intro' => 'Explore sheet metal components offered by Standard Exports for industrial assemblies and equipment.',
+        'image' => 'clinch-bolt.webp',
+    ],
 ];
 
 if ($selected_category === null) {
@@ -233,17 +243,28 @@ $washersproducts = [
 // Cast and forged items
 $castForgedProducts = [
     [
+        'name' => 'Gear Casting',
+        'image' => 'assets/images/products/gear-casting.png',
+        'description' => 'Gear castings for industrial machinery, included in the cast and forged items range.'
+    ],
+];
+
+$cncMachineComponents = [
+    [
+        'name' => 'CNC Machine Components',
+        'image' => 'assets/images/cnc-machine.jpg',
+        'description' => 'Components for CNC machinery and industrial equipment. Contact us to discuss your requirements.',
+    ],
+];
+
+$sheetMetalComponents = [
+    [
         'name' => 'Gate Roller Bracket',
         'image' => 'assets/images/products/Gate Roller Bracket.png',
         'description' => 'Gate roller brackets for sliding gate systems, included in the cast and forged items range.'
     ],
-    [
-        'name' => 'Gear Casting',
-        'image' => 'assets/images/products/gear-casting.png',
-        'description' => 'Gear castings for industrial machinery, included in the cast and forged items range.'
-    ]
-
 ];
+
 ?>
 
 <!-- Page Header -->
@@ -264,6 +285,8 @@ $all_product_groups = [
     'nuts' => $nutsproducts,
     'washers' => $washersproducts,
     'cast-forged' => $castForgedProducts,
+    'cnc-machine-components' => $cncMachineComponents,
+    'sheet-metal-components' => $sheetMetalComponents,
 ];
 $product_groups = [$selected_category => $all_product_groups[$selected_category]];
 ?>
@@ -273,8 +296,11 @@ $product_groups = [$selected_category => $all_product_groups[$selected_category]
         <div class="container-fluid">
             <div class="contact-intro product-intro">
                 <h1><?php echo htmlspecialchars($category_details[$selected_category]['title']); ?></h1>
-                <p><?php echo htmlspecialchars($category_details[$selected_category]['intro']); ?> Products are available in
-                    Mild Steel, EN-Series, CI, SGI, and stainless steel.</p>
+                <p><?php echo htmlspecialchars($category_details[$selected_category]['intro']); ?>
+                    <?php if (in_array($selected_category, ['bolts', 'nuts', 'washers', 'cast-forged'], true)): ?>
+                        Products are available in Mild Steel, EN-Series, CI, SGI, and stainless steel.
+                    <?php endif; ?>
+                </p>
             </div>
             <div class="products-grid">
                 <?php foreach ($products as $product): ?>

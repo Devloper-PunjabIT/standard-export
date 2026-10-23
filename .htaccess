@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# Redirect the former gallery URL to the infrastructure page.
+RewriteRule ^gallery(?:\.php)?/?$ infrastructure [R=301,L,NC]
+
 # Redirect old /file.php URLs to /file (only for GET requests)
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
 RewriteCond %{REQUEST_METHOD} !=POST

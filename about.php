@@ -21,8 +21,8 @@ include 'includes/header.php';
                 <span class="section-tag">Our Story · Since 1989</span>
                 <h1>Engineering strength.<br><span>Built on experience.</span></h1>
                 <p class="about-profile-lead">
-                    Standard Exports is a Ludhiana-based manufacturer and exporter of bolts, nuts, washers, and cast and
-                    forged items.
+                    Standard Exports is a Ludhiana-based manufacturer and exporter of bolts, nuts, washers, cast and
+                    forged items, and industrial components.
                 </p>
                 <p>
                     Operating through Standard Exports' Nut Bolt Division, the company supplies products in Mild Steel,
@@ -57,7 +57,7 @@ include 'includes/header.php';
             </div>
             <div class="about-fact">
                 <span class="about-fact-icon"><i class="fas fa-cubes"></i></span>
-                <span><strong>Four Categories</strong><small>Bolts · Nuts · Washers · Cast &amp; Forged</small></span>
+                <span><strong>Six Categories</strong><small>Fasteners · Cast &amp; Forged · CNC Machine · Sheet Metal</small></span>
             </div>
         </div>
     </div>
@@ -81,7 +81,7 @@ include 'includes/header.php';
                         <h3>Products &amp; materials</h3>
                     </div>
                 </div>
-                <p>Manufactured and exported by Standard Exports' Nut Bolt Division.</p>
+                <p>Manufactured and exported by Standard Exports.</p>
 
                 <h4>Product categories</h4>
                 <ul class="about-category-list">
@@ -93,6 +93,10 @@ include 'includes/header.php';
                                 class="fas fa-arrow-right" aria-hidden="true"></i></a></li>
                     <li><a href="<?= SITE_URL ?>/cast-forged"><span class="about-category-number">04</span><span>Cast &amp; Forged
                                 Items</span><i class="fas fa-arrow-right" aria-hidden="true"></i></a></li>
+                    <li><a href="<?= SITE_URL ?>/cnc-machine-components"><span class="about-category-number">05</span><span>CNC Machine Components</span><i
+                                class="fas fa-arrow-right" aria-hidden="true"></i></a></li>
+                    <li><a href="<?= SITE_URL ?>/sheet-metal-components"><span class="about-category-number">06</span><span>Sheet Metal Components</span><i
+                                class="fas fa-arrow-right" aria-hidden="true"></i></a></li>
                 </ul>
 
                 <h4>Available materials</h4>
@@ -145,7 +149,7 @@ include 'includes/header.php';
     <div class="container-fluid">
         <div class="cta-content-compact">
             <h2>Enquire with Standard Exports</h2>
-            <p>Contact us about bolts, nuts, washers, and cast and forged items in our listed material range.</p>
+            <p>Contact us about our fasteners, cast and forged items, and industrial components.</p>
             <div class="cta-buttons-compact">
                 <a href="<?= SITE_URL ?>/contact" class="btn btn-primary">Get in Touch</a>
                 <a href="<?= SITE_URL ?>/bolts" class="btn btn-outline-cta">View Bolts</a>
